@@ -1,0 +1,150 @@
+*{box-sizing: border-box;padding: 0;margin: 0;}
+body{background-color:white;}
+.cat{
+    position: relative;
+}
+.head{
+  position:relative;
+	width:320px;
+	height:300px;
+	border-radius:150px;
+	background:#07bbee;
+background-color: RGB(7,187,238);
+}
+.face{
+    width:265px;
+	height:195px;
+	border-radius:150px;
+	position:absolute;
+	top:75px;
+	left:25px;
+    background-color: white;
+    z-index: 2;
+}
+.nose{
+    width:30px;
+	height:30px;
+	border-radius:15px;
+	background:#c93300;
+	border:2px solid #000;
+	position:absolute;
+	top:110px;
+	left:140px;
+    z-index: 3;
+}
+.nose2
+{
+	width:3px;
+	height:100px;
+	background:#333;
+	position:absolute;
+	top:140px;
+	left:155px;
+	z-index:3;
+}
+.eye{
+    width:72px;
+	height:82px;
+	background:#fff;
+	border:2px solid #000;
+	border-radius:35px 35px;
+	position:absolute;
+	top:40px; 
+    z-index: 3;
+}
+.eye::before{
+    content: '';
+    display: block;
+    border: 1px solid black;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    left:40px;
+    top:40px;
+}
+.eye.left{
+  transform: translateX(80px);
+}
+.eye.right{
+  transform: translateX(160px);
+}
+.mouth{
+    width:220px;
+	height:400px;
+	border-bottom:3px solid black;
+	border-radius:120px;
+	position:absolute;
+	top:-160px;
+	left:45px;
+    z-index: 2;
+}
+.whiskers{
+	width:220px;
+	height:80px;
+	background:#fff;
+	border-radius:15px;
+	position:absolute;
+	top:120px;
+	left:45px;
+	z-index:2;
+}
+.whiskers .whisker
+{
+	width:60px;
+	height:2px;
+	background:#333;
+	position:absolute;
+	z-index:2;
+}
+.whiskers .rTop {
+  left: 165px;
+  top: 25px;
+}
+.whiskers .rMiddle {
+  left: 167px;
+  top: 45px;
+}
+.whiskers .rBottom {
+  left: 165px;
+  top: 65px;
+}
+.whiskers .lTop {
+  left: 0;
+  top: 25px;
+}
+.whiskers .lMiddle {
+  left: -2px;
+  top: 45px;
+}
+.whiskers .lBottom {
+  left: 0;
+  top: 65px;
+}
+.whiskers .r160 {
+  transform: rotate(160deg);
+}
+.whiskers .r20 {
+  transform: rotate(200deg);
+}
+@keyframes wave{
+   0%{
+       transform: scale(1);
+   }
+   33%{
+    transform: scale(1.2);
+   }
+   66%{
+    transform: scale(1.1);
+   }
+   100%{
+    transform: scale(1);
+   }
+}
+
+.nose:hover{
+    animation: wave 3000ms infinite linear;
+
+}
+
